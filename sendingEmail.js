@@ -1,0 +1,3 @@
+/*
+This file will contain the sample code for sending the email notification.
+*/
