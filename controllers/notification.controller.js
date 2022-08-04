@@ -20,7 +20,7 @@ exports.acceptNotificationRequest = async (req,res)=>{
         //send the tracking id back to the caller 
            // _id can be considered as the tracking id 
 
-        req.status(201).send({
+        res.status(201).send({
             message:"Request Accepted",
             trackingId:notification._id//so we are sending the objectId of the notification
         })
