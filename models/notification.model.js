@@ -7,7 +7,7 @@ const notificationSchema=new mongoose.Schema({
         required:true
     },
     recepientEmails:{
-        type:[String],
+        type:String,//comma seperated mails will be needed 
         required:true
     },
     content:{

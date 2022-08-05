@@ -23,6 +23,7 @@ db.once("open",()=>{
 
 
 require("./routes/notification.route")(app);
+require("./schedulers/emailScheduler")
 
 app.listen(serverConfig.PORT,()=>{
     console.log("Server is listen on port " + process.env.PORT)
