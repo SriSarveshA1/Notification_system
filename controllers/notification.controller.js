@@ -23,7 +23,7 @@ exports.acceptNotificationRequest = async (req,res)=>{
         res.status(201).send({
             message:"Request Accepted",
             trackingId:notification._id//so we are sending the objectId of the notification
-        })
+        });
     }
     catch(err){
         res.status(500).send({

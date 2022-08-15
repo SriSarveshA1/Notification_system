@@ -25,6 +25,13 @@ db.once("open",()=>{
 require("./routes/notification.route")(app);
 require("./schedulers/emailScheduler")
 
+//so when the api endpoint is not a valid one
+app.use((req,res)=>{
+    res.status(404).send({message:"Requested End point is not present"});
+})
+
+
+
 app.listen(serverConfig.PORT,()=>{
     console.log("Server is listen on port " + process.env.PORT)
 })
